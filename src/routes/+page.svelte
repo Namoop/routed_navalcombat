@@ -8,6 +8,8 @@
 	import { incS, outS, landS } from "../lib/save";
 	import Signature from "$lib/Signature.svelte";
 	import ShareModal from "$lib/ShareModal.svelte";
+	import "./app.css";
+	import "./smui-dark.css";
 	
 
 	const modal = writable(null);
