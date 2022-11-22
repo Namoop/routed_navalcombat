@@ -3664,10 +3664,10 @@ svg.mdc-button__icon {
   margin-right: 0px;
   content: "*";
 }
-[dir=rtl] .mdc-floating-label--required, .mdc-floating-label--required[dir=rtl] {
-  /*rtl:begin:ignore*/
-  /*rtl:end:ignore*/
-}
+/* [dir=rtl] .mdc-floating-label--required, .mdc-floating-label--required[dir=rtl] {
+  /*rtl:begin:ignore*a/
+  /*rtl:end:ignore*a/
+} */
 [dir=rtl] .mdc-floating-label--required::after, .mdc-floating-label--required[dir=rtl]::after {
   /* @noflip */ /*rtl:ignore*/
   margin-left: 0;
@@ -4807,10 +4807,10 @@ svg.mdc-button__icon {
     transform: translateX(calc(0 - 32px)) translateY(-34.75px) scale(0.75);
   }
 }
-[dir=rtl] .mdc-select--outlined.mdc-select--with-leading-icon, .mdc-select--outlined.mdc-select--with-leading-icon[dir=rtl] {
-  /*rtl:begin:ignore*/
-  /*rtl:end:ignore*/
-}
+/* [dir=rtl] .mdc-select--outlined.mdc-select--with-leading-icon, .mdc-select--outlined.mdc-select--with-leading-icon[dir=rtl] {
+  /*rtl:begin:ignore*a/
+  /*rtl:end:ignore*a/
+} */
 [dir=rtl] .mdc-select--outlined.mdc-select--with-leading-icon .mdc-floating-label--shake, .mdc-select--outlined.mdc-select--with-leading-icon[dir=rtl] .mdc-floating-label--shake {
   animation: mdc-floating-label-shake-float-above-select-outlined-leading-icon-56px 250ms 1;
 }
@@ -8571,9 +8571,9 @@ https://github.com/material-components/material-components-web/issues/31
   /* @alternate */
   border-radius: var(--mdc-shape-medium, 4px);
   /* @noflip */ /*rtl:ignore*/
-  transform-origin-left: top left;
+  /* transform-origin-left: top left; */
   /* @noflip */ /*rtl:ignore*/
-  transform-origin-right: top right;
+  /* transform-origin-right: top right; */
 }
 .mdc-menu-surface:focus {
   outline: none;
@@ -8593,14 +8593,14 @@ https://github.com/material-components/material-components-web/issues/31
   opacity: 0;
   transition: opacity 0.075s linear;
 }
-[dir=rtl] .mdc-menu-surface, .mdc-menu-surface[dir=rtl] {
+/* [dir=rtl] .mdc-menu-surface, .mdc-menu-surface[dir=rtl] { */
   /*rtl:begin:ignore*/
   /* @noflip */ /*rtl:ignore*/
-  transform-origin-left: top right;
+  /* transform-origin-left: top right; */
   /* @noflip */ /*rtl:ignore*/
-  transform-origin-right: top left;
+  /* transform-origin-right: top left; */
   /*rtl:end:ignore*/
-}
+/* } */
 
 .mdc-menu-surface--anchor {
   position: relative;
@@ -9868,9 +9868,9 @@ https://github.com/material-components/material-components-web/issues/31
   text-transform: var(--mdc-typography-body1-text-transform, inherit);
 }
 
-.mdc-dialog__title-icon {
+/* .mdc-dialog__title-icon { */
   /** Hook for theming API. */
-}
+/* } */
 
 .mdc-dialog,
 .mdc-dialog__scrim {
@@ -9909,12 +9909,12 @@ https://github.com/material-components/material-components-web/issues/31
 .mdc-dialog .mdc-dialog__surface {
   max-height: calc(100% - 32px);
 }
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  .mdc-dialog .mdc-dialog__container {
+/* @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { */
+  /* .mdc-dialog .mdc-dialog__container { */
     /* stylelint-disable */
     /* stylelint-enable*/
-  }
-}
+  /* } */
+/* } */
 .mdc-dialog.mdc-dialog--fullscreen .mdc-dialog__surface {
   max-width: none;
 }
@@ -12275,10 +12275,10 @@ a.smui-fab--color-primary, a.smui-fab--color-primary:not(:disabled) .mdc-fab__ic
 .mdc-linear-progress--indeterminate.mdc-linear-progress--animation-ready .mdc-linear-progress__secondary-bar > .mdc-linear-progress__bar-inner {
   animation: mdc-linear-progress-secondary-indeterminate-scale 2s infinite linear;
 }
-[dir=rtl] .mdc-linear-progress, .mdc-linear-progress[dir=rtl] {
+/* [dir=rtl] .mdc-linear-progress, .mdc-linear-progress[dir=rtl] { */
   /*rtl:begin:ignore*/
   /*rtl:end:ignore*/
-}
+/* } */
 [dir=rtl] .mdc-linear-progress:not([dir=ltr]) .mdc-linear-progress__bar, .mdc-linear-progress[dir=rtl]:not([dir=ltr]) .mdc-linear-progress__bar {
   /* @noflip */ /*rtl:ignore*/
   right: 0;
@@ -14798,12 +14798,12 @@ a.smui-fab--color-primary, a.smui-fab--color-primary:not(:disabled) .mdc-fab__ic
 }
 
 @media screen and (forced-colors: active), (-ms-high-contrast: active) {
-  .mdc-switch:enabled .mdc-switch__shadow {
+  /* .mdc-switch:enabled .mdc-switch__shadow { */
     /* @alternate */
-  }
-  .mdc-switch:disabled .mdc-switch__shadow {
+  /* } */
+  /* .mdc-switch:disabled .mdc-switch__shadow { */
     /* @alternate */
-  }
+  /* } */
   .mdc-switch:disabled .mdc-switch__handle::after {
     opacity: 1;
     /* @alternate */
@@ -16302,10 +16302,10 @@ a.smui-fab--color-primary, a.smui-fab--color-primary:not(:disabled) .mdc-fab__ic
     transform: translateX(calc(0 - 32px)) translateY(-34.75px) scale(0.75);
   }
 }
-[dir=rtl] .mdc-text-field--with-leading-icon.mdc-text-field--outlined, .mdc-text-field--with-leading-icon.mdc-text-field--outlined[dir=rtl] {
+/* [dir=rtl] .mdc-text-field--with-leading-icon.mdc-text-field--outlined, .mdc-text-field--with-leading-icon.mdc-text-field--outlined[dir=rtl] { */
   /*rtl:begin:ignore*/
   /*rtl:end:ignore*/
-}
+/* } */
 [dir=rtl] .mdc-text-field--with-leading-icon.mdc-text-field--outlined .mdc-floating-label--shake, .mdc-text-field--with-leading-icon.mdc-text-field--outlined[dir=rtl] .mdc-floating-label--shake {
   animation: mdc-floating-label-shake-float-above-text-field-outlined-leading-icon 250ms 1;
 }
@@ -16597,10 +16597,10 @@ a.smui-fab--color-primary, a.smui-fab--color-primary:not(:disabled) .mdc-fab__ic
   /*rtl:end:ignore*/
 }
 
-[dir=rtl] .mdc-text-field--ltr-text, .mdc-text-field--ltr-text[dir=rtl] {
+/* [dir=rtl] .mdc-text-field--ltr-text, .mdc-text-field--ltr-text[dir=rtl] { */
   /*rtl:begin:ignore*/
   /*rtl:end:ignore*/
-}
+/* } */
 [dir=rtl] .mdc-text-field--ltr-text .mdc-text-field__input,
 [dir=rtl] .mdc-text-field--ltr-text .mdc-text-field__affix, .mdc-text-field--ltr-text[dir=rtl] .mdc-text-field__input,
 .mdc-text-field--ltr-text[dir=rtl] .mdc-text-field__affix {
@@ -16635,10 +16635,10 @@ a.smui-fab--color-primary, a.smui-fab--color-primary:not(:disabled) .mdc-fab__ic
   order: 5;
 }
 
-[dir=rtl] .mdc-text-field--ltr-text.mdc-text-field--end-aligned, .mdc-text-field--ltr-text.mdc-text-field--end-aligned[dir=rtl] {
+/* [dir=rtl] .mdc-text-field--ltr-text.mdc-text-field--end-aligned, .mdc-text-field--ltr-text.mdc-text-field--end-aligned[dir=rtl] { */
   /*rtl:begin:ignore*/
   /*rtl:end:ignore*/
-}
+/* } */
 [dir=rtl] .mdc-text-field--ltr-text.mdc-text-field--end-aligned .mdc-text-field__input, .mdc-text-field--ltr-text.mdc-text-field--end-aligned[dir=rtl] .mdc-text-field__input {
   /* @noflip */ /*rtl:ignore*/
   text-align: right;
