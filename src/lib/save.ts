@@ -9,11 +9,12 @@ export const landS = writable([] as DragNodeList);
 export const sharing = writable(false);
 export const sharekey = writable("");
 
-let all: any = {
-	incS: [],
-	outS: [],
-	landS: [],
+let all = {
+	incS: [] as DragNodeList,
+	outS: [] as DragNodeList,
+	landS: [] as DragNodeList,
 	sharekey: Math.random().toString(36).substring(2, 10),
+	timestamp: 0,
 };
 
 // @ts-ignore
@@ -30,6 +31,7 @@ sharing.subscribe((v) => (isSharing = v));
 
 const sendToDB = () => {
 	if (!isSharing) return;
+	all.timestamp = Date.now();
 	set(ref(db, "pages/" + all.sharekey), { all });
 };
 
