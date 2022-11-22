@@ -6,6 +6,9 @@
 	import FactModal from "../lib/FactModal.svelte";
 	import type { Enemy, Player, Ship } from "../lib/data";
 	import { incS, outS, landS } from "../lib/save";
+	import Signature from "$lib/Signature.svelte";
+	import ShareModal from "$lib/ShareModal.svelte";
+	
 
 	const modal = writable(null);
 	const randomFact = () =>
@@ -49,10 +52,12 @@
 			);
 		});
 	};
+	const modal2 = writable(null);
 	const getShareLink = () => {
 		//combat must be started
 		//ends after 2 hours
-		alert("boink");
+		// @ts-ignore
+		modal2.set(ShareModal)
 	};
 	const idkyet = () => {
 		alert("boink");
@@ -102,6 +107,14 @@
 			}}
 			styleContent={{ overflow: "visible" }}
 		/>
+		<Modal
+			show={$modal2}
+			styleWindow={{
+				backgroundColor: "rgb(20, 20, 20)",
+				color: "rgba(255,255,255,0.87)",
+			}}
+			styleContent={{ overflow: "visible" }}
+		/>
 
 		<hr />
 		<h2>Not in Combat</h2>
@@ -113,6 +126,8 @@
 		<NewCharacter bind:shipItems={$outS} bind:landItems={$landS} />
 	</main>
 </div>
+
+<Signature />
 
 <style>
 	.box {
