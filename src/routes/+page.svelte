@@ -83,7 +83,7 @@
 				<button on:click={randomFact}> Random Fact </button>
 			</div>
 			<div class="buttonwrapper">
-				<button on:click={getShareLink}> Share Link (wip) </button>
+				<button on:click={getShareLink}> Share Link </button>
 			</div>
 			<div class="buttonwrapper">
 				<button on:click={begincombat}> Begin Combat</button>
