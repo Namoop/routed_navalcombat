@@ -33,12 +33,14 @@ sharing.subscribe((v) => {
 
 const sendToDB = () => {
 	if (!isSharing) return;
-	set(ref(db, "pages/" + isSharing), { all });
+	console.log(all.sharekey)
+	set(ref(db, "pages/" + all.sharekey), { all });
 };
 
 (async function () {
 	all = (await localforage.getItem("all")) ?? all;
-	sharekey.set(all.sharekey ?? Math.random().toString(36).substring(2, 10))
+	all.sharekey = all.sharekey ?? Math.random().toString(36).substring(2, 10);
+	sharekey.set(all.sharekey)
 	incS.set(all.incS as DragNodeList);
 	outS.set(all.outS as DragNodeList);
 	landS.set(all.landS as DragNodeList);
