@@ -86,7 +86,7 @@
 				<button on:click={getShareLink}> Share Link </button>
 			</div>
 			<div class="buttonwrapper">
-				<button on:click={begincombat}> Begin Combat</button>
+				<button on:click={begincombat}> Begin Combat (wip) </button>
 			</div>
 			<div class="buttonwrapper">
 				<button on:click={idkyet}> Placeholder (wip) </button>
