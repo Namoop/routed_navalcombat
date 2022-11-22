@@ -48,7 +48,7 @@
 			data: char,
 			items: [],
 			parentable: false,
-			type: undefined,
+			type: "",
 		});
 		landItems = landItems;
 	}
@@ -63,7 +63,7 @@
 			data: char,
 			items: [],
 			parentable: false,
-			type: undefined,
+			type: "",
 		});
 		landItems = landItems;
 	}

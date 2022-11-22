@@ -14,5 +14,5 @@ type DragNode = {
 	items: DragNodeList;
 	parentable: boolean;
 	type: string | undefined;
-	data: {};
+	data: {[index: string]: any};
 }

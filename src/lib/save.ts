@@ -26,21 +26,17 @@ initializeApp(firebaseConfig);
 const db = getDatabase();
 
 let isSharing = false;
-sharing.subscribe((v) => {
-	isSharing = v;
-	console.log(isSharing);
-});
+sharing.subscribe((v) => (isSharing = v));
 
 const sendToDB = () => {
 	if (!isSharing) return;
-	console.log(all.sharekey)
 	set(ref(db, "pages/" + all.sharekey), { all });
 };
 
 (async function () {
 	all = (await localforage.getItem("all")) ?? all;
 	all.sharekey = all.sharekey ?? Math.random().toString(36).substring(2, 10);
-	sharekey.set(all.sharekey)
+	sharekey.set(all.sharekey);
 	incS.set(all.incS as DragNodeList);
 	outS.set(all.outS as DragNodeList);
 	landS.set(all.landS as DragNodeList);
@@ -64,8 +60,8 @@ const sendToDB = () => {
 let rateLimit = false;
 let savePending = false;
 const save = () => {
-	// console.log("attempt");
 	if (rateLimit) {
+		// console.log("attempt");
 		savePending = true;
 		return;
 	}
@@ -73,7 +69,7 @@ const save = () => {
 	localforage.setItem("all", all);
 	sendToDB();
 
-	console.log(`saved ${isSharing ? " +cloud" : ""}`);
+	// console.log(`saved ${isSharing ? " +cloud" : ""}`);
 	savePending = false;
 	rateLimit = true;
 	setTimeout(() => {
