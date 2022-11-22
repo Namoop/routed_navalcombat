@@ -1,0 +1,32 @@
+{
+	"name": "routed-navalcombat",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+	},
+	"devDependencies": {
+		"@smui-extra/autocomplete": "^7.0.0-beta.0",
+		"@smui/snackbar": "^7.0.0-beta.0",
+		"@smui/switch": "^7.0.0-beta.0",
+		"@smui/textfield": "^7.0.0-beta.0",
+		"@sveltejs/adapter-auto": "next",
+		"@sveltejs/kit": "next",
+		"localforage": "^1.10.0",
+		"svelecte": "^3.12.0",
+		"svelte": "^3.44.0",
+		"svelte-check": "^2.7.1",
+		"svelte-dnd-action": "^0.9.22",
+		"svelte-icons": "^2.1.0",
+		"svelte-preprocess": "^4.10.6",
+		"svelte-simple-modal": "^1.4.5",
+		"tslib": "^2.3.1",
+		"typescript": "^4.7.4",
+		"vite": "^3.1.0"
+	},
+	"type": "module"
+}

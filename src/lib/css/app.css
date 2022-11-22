@@ -1,0 +1,119 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #181a1b;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.card {
+  padding: 2em;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  color: white;
+  transition: border-color 0.25s, transform 0.15s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+button:active {
+	transform: scale(0.95);
+}
+
+.svelecte-dark {
+	background-color: inherit;
+	color: inherit;
+	border-radius: 5px;
+	border: 1px solid darkgray;
+}
+.svelecte-dark > .sv-dropdown {
+	background-color: inherit !important;
+	border-radius: 0 0 5px 5px !important;
+	border: 1px solid darkgray !important;
+}
+.svelecte-dark .sv-dd-item {
+	border-bottom: 1px solid gray;
+	cursor: pointer;
+}
+.svelecte-dark .indicator-container {
+	padding: 8px 2px !important;
+}
+.svelecte-dark .indicator-container:hover {
+	color: #7e7e7e !important;
+}
+.svelecte-dark .sv-content {
+	flex: 1 1 auto;
+}
+.vertLine+.svelecte-dark {
+	min-width: 140px;
+}
+
+
+[data-charname=""]::after {
+	content: "Unnamed";
+	font-style: italic;
+	opacity: 0.65;
+}
+.smui-autocomplete__menu {
+	max-height: 200px !important;
+}
+.mdc-switch {
+	margin: 0 !important;
+}
+h2 > br {
+	display: none
+}
+.window .dmgwrapper {
+	position: absolute;
+	top: -2em;
+}
