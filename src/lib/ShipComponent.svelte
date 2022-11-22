@@ -4,14 +4,14 @@
 	import Modal, { bind } from "svelte-simple-modal";
 	import ShipModal from "./ShipModal.svelte";
 	import Quickstats from "./Quickstats.svelte";
-	import type { SvelteComponentTyped } from "svelte";
 	import MdClose from "svelte-icons/md/MdClose.svelte";
 	import { incS, outS } from "./save";
 
 	const modal = writable(null);
 	const showModal = () =>
 		modal.set(
-			bind(ShipModal as unknown as SvelteComponentTyped, { data: data })
+			// @ts-ignore
+			bind(ShipModal, { data: data })
 		);
 
 	const updateData = () => (data = data); // reactivity is wierd

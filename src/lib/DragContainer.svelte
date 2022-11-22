@@ -18,6 +18,7 @@
 		parentable: true,
 		items: items,
 		type: parenttype,
+		data: {},
 	};
 	items = node.items ?? [];
 	$: node.items = items;

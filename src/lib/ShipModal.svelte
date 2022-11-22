@@ -52,8 +52,8 @@
 	const delCargo = function (e: MouseEvent) {
 		let icon = e.target as HTMLElement;
 		while (![...icon.classList].includes("iconclose"))
-			icon = icon.parentElement;
-		data.cargo.splice(+icon.dataset.cargoid, 1);
+			icon = icon.parentElement as HTMLElement;
+		data.cargo.splice(+(icon.dataset.cargoid as string), 1);
 		data.cargo = data.cargo;
 		data = data;
 	};
@@ -63,8 +63,8 @@
 	const delQuip = function (e: MouseEvent) {
 		let icon = e.target as HTMLElement;
 		while (![...icon.classList].includes("iconclose"))
-			icon = icon.parentElement;
-		data.equipment.splice(+icon.dataset.quipid, 1);
+			icon = icon.parentElement as HTMLElement;
+		data.equipment.splice(+(icon.dataset.quipid as string), 1);
 		data.equipment = data.equipment;
 		data = data;
 	};

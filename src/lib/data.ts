@@ -6,9 +6,9 @@ export type Equipment = {
 	maxhp: number; //eg 50hp
 	weight: number; //eg 5 tons
 	price: number; //eg 70gp
-	tohit?: number; //eg +6 to hit
-	range?: [number, number]; //eg 60/120
-	damage?: [number, number]; //eg 2d6
+	tohit: number; //eg +6 to hit
+	range: [number, number]; //eg 60/120
+	damage: [number, number]; //eg 2d6
 	description: string; //eg "Required position: Helm"
 
 	pos: "fore" | "aft" | "port" | "starboard"; //for internal use (if n/a use fore)

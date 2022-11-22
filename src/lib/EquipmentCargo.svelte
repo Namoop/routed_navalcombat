@@ -5,12 +5,14 @@
 	export let quip: Equipment;
 
 	const cyclePos = () => {
-		const posarr: ["fore", "port", "aft", "starboard"] = [
+		type Pos = ["fore", "port", "aft", "starboard"]
+		const posarr: Pos  = [
 			"fore",
 			"port",
 			"aft",
 			"starboard",
 		];
+		// @ts-ignore
 		quip.pos = posarr.at(posarr.indexOf(quip.pos) - 1);
 	};
 

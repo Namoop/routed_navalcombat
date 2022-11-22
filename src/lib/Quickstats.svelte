@@ -20,7 +20,6 @@
 		if (isNaN(+data.hp)) data.hp = hpstore;
 	};
 	const dealdamage = (e: KeyboardEvent | MouseEvent) => {
-		// @ts-ignore oh typescript why do you think im checking for undefined
 		if (e.code !== "Enter" && e.code !== undefined) return;
 		e.preventDefault();
 		validateDmg(false);

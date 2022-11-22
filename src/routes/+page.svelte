@@ -4,13 +4,13 @@
 	import DragBox from "../lib/DragContainer.svelte";
 	import NewCharacter from "../lib/NewCharacter.svelte";
 	import FactModal from "../lib/FactModal.svelte";
-	import type { SvelteComponentTyped } from "svelte";
 	import type { Enemy, Player, Ship } from "../lib/data";
 	import { incS, outS, landS } from "../lib/save";
 
 	const modal = writable(null);
 	const randomFact = () =>
-		modal.set(FactModal as unknown as SvelteComponentTyped);
+		// @ts-ignore
+		modal.set(FactModal);
 
 	const clearDead = () => {
 		$incS = $incS.filter((a) => (a.data as { hp: number }).hp > 0);

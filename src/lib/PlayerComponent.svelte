@@ -2,7 +2,6 @@
 	import { Colors, type Player } from "./data";
 	import { writable } from "svelte/store";
 	import Modal, { bind } from "svelte-simple-modal";
-	import type { SvelteComponentTyped } from "svelte";
 	import MdClose from "svelte-icons/md/MdClose.svelte";
 	import PlayerStats from "./PlayerStats.svelte";
 	import PlayerModal from "./PlayerModal.svelte";
@@ -12,7 +11,8 @@
 	const modal = writable(null);
 	const showModal = () =>
 		modal.set(
-			bind(PlayerModal as unknown as SvelteComponentTyped, { data: data })
+			// @ts-ignore
+			bind(PlayerModal, { data: data })
 		);
 
 	const updateData = () => (data = data); // reactivity is wierd

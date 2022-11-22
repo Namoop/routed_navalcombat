@@ -14,7 +14,7 @@
 
 	const newcolor = function () {
 		const curr = Object.keys(Colors).indexOf(data.color);
-		data.color = Object.keys(Colors).at(curr-1);
+		data.color = Object.keys(Colors).at(curr-1) as string;
 	}
 </script>
 

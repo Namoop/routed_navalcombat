@@ -1,7 +1,7 @@
 <script lang="ts">
-	// @ts-nocheck svelcte line only
+	// @ts-ignore
 	import Svelecte from "svelecte";
-	import { NormalPlayerStats, NormalEnemyStats, ships, type Player, type Ship } from "./data";
+	import { NormalPlayerStats, NormalEnemyStats, ships, type Player, type Ship, type Enemy } from "./data";
 	import NewCharacterEnemy from "./NewCharacter_Enemy.svelte";
 	import NewCharacterPlayer from "./NewCharacter_Player.svelte";
 	import NewCharacterShip from "./NewCharacter_Ship.svelte";
@@ -46,6 +46,9 @@
 			name: char.name,
 			itemComponent: "player",
 			data: char,
+			items: [],
+			parentable: false,
+			type: undefined,
 		});
 		landItems = landItems;
 	}
@@ -58,6 +61,9 @@
 			name: char.name,
 			itemComponent: "enemy",
 			data: char,
+			items: [],
+			parentable: false,
+			type: undefined,
 		});
 		landItems = landItems;
 	}

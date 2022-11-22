@@ -11,8 +11,8 @@ type DragNode = {
 	id: number | string;
 	name: string;
 	itemComponent: any;
-	items?: DragNodeList;
-	parentable?: boolean;
-	type?: string;
-	data?: {};
+	items: DragNodeList;
+	parentable: boolean;
+	type: string | undefined;
+	data: {};
 }

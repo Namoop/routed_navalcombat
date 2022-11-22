@@ -1,5 +1,6 @@
 <script lang="ts">
-	// @ts-nocheck Errors on contenteditable and svelecte type are just annoying (lns whatever its the contenteditables)
+	// @ts-nocheck Errors on contenteditable are just annoying (lns whatever its the contenteditables)
+	// @ts-ignore
 	import Svelecte from "svelecte";
 	import RandomIcon from "svelte-icons/fa/FaRedoAlt.svelte";
 	import type { Ship } from "./data";
