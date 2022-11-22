@@ -27,7 +27,10 @@ initializeApp(firebaseConfig);
 const db = getDatabase();
 
 let isSharing = false;
-sharing.subscribe((v) => (isSharing = v));
+sharing.subscribe((v) => {
+	isSharing = v;
+	save();
+});
 
 const sendToDB = () => {
 	if (!isSharing) return;
