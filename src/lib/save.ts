@@ -13,6 +13,7 @@ let all: any = {
 	incS: [],
 	outS: [],
 	landS: [],
+	sharekey: Math.random().toString(36).substring(2, 10),
 };
 
 // @ts-ignore
@@ -36,12 +37,8 @@ const sendToDB = () => {
 };
 
 (async function () {
-	let tempsharekey = (await localforage.getItem("sharekey")) as string;
-	if (!tempsharekey)
-		tempsharekey = Math.random().toString(36).substring(2, 10);
-	sharekey.set(tempsharekey);
-
 	all = (await localforage.getItem("all")) ?? all;
+	sharekey.set(all.sharekey ?? Math.random().toString(36).substring(2, 10))
 	incS.set(all.incS as DragNodeList);
 	outS.set(all.outS as DragNodeList);
 	landS.set(all.landS as DragNodeList);
