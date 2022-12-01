@@ -9,6 +9,7 @@ export const landS = writable([] as DragNodeList);
 export const sharing = writable(false);
 export const sharekey = writable("");
 
+
 let all = {
 	incS: [] as DragNodeList,
 	outS: [] as DragNodeList,
@@ -16,6 +17,7 @@ let all = {
 	sharekey: Math.random().toString(36).substring(2, 10),
 	timestamp: 0,
 };
+
 
 // @ts-ignore
 window.localforage = localforage;
@@ -27,16 +29,38 @@ initializeApp(firebaseConfig);
 const db = getDatabase();
 
 let isSharing = false;
-sharing.subscribe((v) => {
-	isSharing = v;
-	save();
-});
 
 const sendToDB = () => {
 	if (!isSharing) return;
 	all.timestamp = Date.now();
 	set(ref(db, "pages/" + all.sharekey), { all });
 };
+
+let rateLimit = false;
+let savePending = false;
+const save = () => {
+	if (rateLimit) {
+		// console.log("attempt");
+		savePending = true;
+		return;
+	}
+
+	localforage.setItem("all", all);
+	sendToDB();
+
+	// console.log(`saved ${isSharing ? " +cloud" : ""}`);
+	savePending = false;
+	rateLimit = true;
+	setTimeout(() => {
+		rateLimit = false;
+		if (savePending) save();
+	}, 5000);
+};
+
+sharing.subscribe((v) => {
+	isSharing = v;
+	save();
+});
 
 (async function () {
 	all = (await localforage.getItem("all")) ?? all;
@@ -61,24 +85,3 @@ const sendToDB = () => {
 		save();
 	});
 })();
-
-let rateLimit = false;
-let savePending = false;
-const save = () => {
-	if (rateLimit) {
-		// console.log("attempt");
-		savePending = true;
-		return;
-	}
-
-	localforage.setItem("all", all);
-	sendToDB();
-
-	// console.log(`saved ${isSharing ? " +cloud" : ""}`);
-	savePending = false;
-	rateLimit = true;
-	setTimeout(() => {
-		rateLimit = false;
-		if (savePending) save();
-	}, 5000);
-};
